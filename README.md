@@ -173,8 +173,13 @@ nmap -sC -sV -p22,80,201 192.168.0.1 -oN targeted
 **-sC** -> Para lanzar unos scripts defaults <br>
 **-sV** -> Para sondear el servicio y versión del puerto <br>
 **-oN targeted** -> Para exportarlo a el archivo targeted en formato nmap <br>
+<br>
+Ahora realizamos un reconocimiento superficial con la herramienta whatweb: <br>
+```
+whatweb http://<dirección-ip>
+```
+Podemos complementar el whatweb con el plugin del navegador wappalyzer, que también hace un reconocimiento superficial. <br>
 
-  
   
   
   
