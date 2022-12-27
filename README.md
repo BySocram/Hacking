@@ -143,9 +143,19 @@ Para remover una capabilitie se usa el siguiente comando:
 setcap -r /usr/bin/<capabilitie>
 ```
 ## Pentesting
-  
-  
-  
+### Fase de Reconocimiento
+Usaremos la herramienta nmap para esta fase.<br>
+```
+nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.0.1
+```
+**-p-** -> Indica que queremos escanear todos los puertos <br>
+**--open** -> Indica que queremos escanear los puertos abiertos<br>
+**-sS** -> Modo de escaneo para que vaya rápido y sigiloso, ya que no concluye la conexión(SYN -> [RST (cerrado) | SYN/ACK -> ACK])<br>
+**--min-rate 5000** -> Para indicar que no queremos paquetes mas lentos a 5000 pqtes/s
+**-vvv** -> Para que los puertos que vaya detectando los vaya poniendo por consola
+**-n** -> Indica que no queremos que nos aplique la resolución DNS
+**-PN** -> 
+**192.168.0.1** -> IP de la cual queremos sacar los puertos
   
   
   
