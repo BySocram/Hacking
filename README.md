@@ -22,6 +22,8 @@
 <a href="https://man7.org/linux/man-pages/man7/capabilities.7.html"> Capabilites - Linux manual page </a> <br>
 <a href="https://www.incibe-cert.es/blog/linux-capabilities"> Linux kernel capabilities - No solo de sudo vive root </a> <br>
 <a href="https://deephacking.tech/path-hijacking-y-library-hijacking/"> Path Hijaking y Library Hijacking </a> <br>
+<a href="https://www.redeszone.net/tutoriales/configuracion-puertos/nmap-escanear-puertos-comandos/"> Nmap: Manual de uso </a> <br>
+<a href="https://protegermipc.net/2018/11/07/tutorial-y-listado-de-comandos-mas-utiles-para-nmap/"> Tutorial y listado de comandos útiles para nmap </a> <br>
 
 ## Conceptos Básicos
 ### Permisos
@@ -146,18 +148,51 @@ setcap -r /usr/bin/<capabilitie>
 ### Fase de Reconocimiento
 Usaremos la herramienta nmap para esta fase.<br>
 ```
-nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.0.1
+nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.0.1 -oG allPorts
 ```
 **-p-** -> Indica que queremos escanear todos los puertos <br>
 **--open** -> Indica que queremos escanear los puertos abiertos<br>
 **-sS** -> Modo de escaneo para que vaya rápido y sigiloso, ya que no concluye la conexión(SYN -> [RST (cerrado) | SYN/ACK -> ACK])<br>
-**--min-rate 5000** -> Para indicar que no queremos paquetes mas lentos a 5000 pqtes/s
-**-vvv** -> Para que los puertos que vaya detectando los vaya poniendo por consola
-**-n** -> Indica que no queremos que nos aplique la resolución DNS
-**-PN** -> 
-**192.168.0.1** -> IP de la cual queremos sacar los puertos
+**--min-rate 5000** -> Para indicar que no queremos paquetes mas lentos a 5000 pqtes/s <br>
+**-vvv** -> Para que los puertos que vaya detectando los vaya poniendo por consola <br>
+**-n** -> Indica que no queremos que nos aplique la resolución DNS <br>
+**-Pn** -> Para tratar los hosts como en línea y omitir el descubrimiento de ellos <br>
+**192.168.0.1** -> IP de la cual queremos sacar los puertos<br>
+**-oG allPorts** -> Indicamos que queremos que nos lo exporte en formato grepeable al archivo allPorts <br>
+<br>
+Ahora con el siguiente comando nos extrae la ip y los puertos de esta.
+```
+extractPorts allPorts
+```
+Los puertos se nos copiarán automáticamente en la clipboard.<br>
+<br>
+Ahora lanzamos un comando para detectar la versión y servicio que corren los puertos. <br>
+```
+nmap -sC -sV -p22,80,201 192.168.0.1 -oN targeted
+```
+**-sC** -> Para lanzar unos scripts defaults <br>
+**-sV** -> Para sondear el servicio y versión del puerto <br>
+**-oN targeted** -> Para exportarlo a el archivo targeted en formato nmap <br>
+
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
   
   
