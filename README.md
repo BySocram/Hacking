@@ -119,7 +119,25 @@
 
 ### Abuso y explotación de las capabilities
 En el caso de que ya se haya comprometido un equipo y hayamos dejado una una persistencia privilegiada, en este caso utilizaremos las capabilities.<br>
-
+Para ver las capabilities que hayan definidas a nivel de sistema utilizamos el siguiente comando:
+```
+getcap -r / 2>/dev/null
+```
+Cuando estemos dentro de un equipo y asignemos una capabilite podemos asignar distintos tipos para que a la hora de entrar de nuevo al equipo no tenr <br>
+que explotar la misma vulnerabilidad y entrar mas seguramente. Estas pasan desapercibidas ya que no tienen permisos SUID.<br>
+En el siguiente enlace podemos ver una web donde muestra distintos tipos de capabilities que podemos crear para luego explotarlas y entrar facilmente:
+<a href="https://gtfobins.github.io/#+capabilities"> GTFOBins: Capabilities </a> <br>
+Para definir una capabilitie se usa el siguiente comando:
+```
+setcap cap_setuid+ep /usr/bin/<capabilitie>
+```
+Para remover una capabilitie se usa el siguiente comando:
+```
+setcap -r /usr/bin/<capabilitie>
+```
+<br>
+<br>
+## Pentesting
   
   
   
