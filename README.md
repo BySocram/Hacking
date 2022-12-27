@@ -135,10 +135,7 @@ Para remover una capabilitie se usa el siguiente comando:
 ```
 setcap -r /usr/bin/<capabilitie>
 ```
-<br>
-<br>
 ## Pentesting
-  
   
   
   
