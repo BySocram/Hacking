@@ -24,10 +24,12 @@
 <a href="https://deephacking.tech/path-hijacking-y-library-hijacking/"> Path Hijaking y Library Hijacking </a> <br>
 <a href="https://www.redeszone.net/tutoriales/configuracion-puertos/nmap-escanear-puertos-comandos/"> Nmap: Manual de uso </a> <br>
 <a href="https://protegermipc.net/2018/11/07/tutorial-y-listado-de-comandos-mas-utiles-para-nmap/"> Tutorial y listado de comandos útiles para nmap </a> <br>
+<a href="https://esgeeks.com/como-usar-nmap-con-comandos/#:~:text=Nmap%20es%20una%20utilidad%20muy,puerto%20correspondiente%20(detecci%C3%B3n%20de%20servicios)"> Como usar nmap para principiantes </a> <br>
+<a href="https://www.hostinger.es/tutoriales/bash-script-linux/"> Guía de scripting en Bash </a>
 
 ## Conceptos Básicos
 ### Permisos
-    drwxr-xr-x marcos marcos 4.0 KB Mon Dec 26 23:45:52 2022  marcos
+    drwxr-xr-x marcos marcos 4.0 KB Mon Dec 26 23:45:52 2022 marcos
 
   d = type: directory
 
@@ -156,7 +158,7 @@ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.0.1 -oG allPorts
 **--min-rate 5000** -> Para indicar que no queremos paquetes mas lentos a 5000 pqtes/s <br>
 **-vvv** -> Para que los puertos que vaya detectando los vaya poniendo por consola <br>
 **-n** -> Indica que no queremos que nos aplique la resolución DNS <br>
-**-Pn** -> Para tratar los hosts como en línea y omitir el descubrimiento de ellos <br>
+**-Pn** -> Para que no aplique host discovery. Que no aplique descubrimiento de hosts a través del ARP <br>
 **192.168.0.1** -> IP de la cual queremos sacar los puertos<br>
 **-oG allPorts** -> Indicamos que queremos que nos lo exporte en formato grepeable al archivo allPorts <br>
 <br>
@@ -179,8 +181,8 @@ Ahora realizamos un reconocimiento superficial con la herramienta whatweb: <br>
 whatweb http://<dirección-ip>
 ```
 Podemos complementar el whatweb con el plugin del navegador wappalyzer, que también hace un reconocimiento superficial. <br>
+<br>
 
-  
   
   
   
