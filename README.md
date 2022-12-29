@@ -25,7 +25,8 @@
 <a href="https://www.redeszone.net/tutoriales/configuracion-puertos/nmap-escanear-puertos-comandos/"> Nmap: Manual de uso </a> <br>
 <a href="https://protegermipc.net/2018/11/07/tutorial-y-listado-de-comandos-mas-utiles-para-nmap/"> Tutorial y listado de comandos útiles para nmap </a> <br>
 <a href="https://esgeeks.com/como-usar-nmap-con-comandos/#:~:text=Nmap%20es%20una%20utilidad%20muy,puerto%20correspondiente%20(detecci%C3%B3n%20de%20servicios)"> Como usar nmap para principiantes </a> <br>
-<a href="https://www.hostinger.es/tutoriales/bash-script-linux/"> Guía de scripting en Bash </a>
+<a href="https://www.hostinger.es/tutoriales/bash-script-linux/"> Guía de scripting en Bash </a> <br>
+<a href="https://programmerclick.com/article/27511173495/"> Script de shell para ver el uso de IP del segmento de red </a> <br>
 
 ## Conceptos Básicos
 ### Permisos
